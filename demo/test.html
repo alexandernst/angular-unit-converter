@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app" angular-multi-select-mouse-trap angular-multi-select-key-trap>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="/node_modules/angular/angular.js"></script>
+		<script src="/node_modules/decimal.js/decimal.min.js"></script>
+		<script src="/src/angular-unit-converter.js"></script>
+
+		<script src="app.js"></script>
+	</head>
+
+	<body ng-controller="MainCtrl">
+
+		<label for="e" class="">View is in inches
+		<input id="e" ng-model="value"
+		type="text" placeholder="0" angular-unit-converter convert-from="{{ convertFrom }}" convert-to="{{ convertTo }}" />
+		</label>
+		<p> value on model is {{value}} mm</p>
+		
+		<br />
+		
+		Convert model data to: <br />
+		<select ng-model="convertTo">
+			<option value="in">inches</option>
+			<option value="ft">feet</option>
+		</select>
+
+	</body>
+
+</html>
