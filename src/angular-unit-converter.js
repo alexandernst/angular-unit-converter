@@ -36,13 +36,13 @@ auc.directive("angularUnitConverter", function($filter) {
 			scope.do_convertFrom = function(value) {
 				var from = new Decimal(units[scope.convertFrom]);
 				var to = new Decimal(units[scope.convertTo]);
-				return new Decimal(value).dividedBy(from.dividedBy(to));
+				return (new Decimal(value).dividedBy(from.dividedBy(to))).toNumber();
 			};
 
 			scope.do_convertTo = function(value) {
 				var from = new Decimal(units[scope.convertFrom]);
 				var to = new Decimal(units[scope.convertTo]);
-				return new Decimal(value).times(from.dividedBy(to));
+				return (new Decimal(value).times(from.dividedBy(to))).toNumber();
 			};
 
 			var p = function(viewValue) {
