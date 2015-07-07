@@ -34,12 +34,16 @@ auc.directive("angularUnitConverter", function($filter) {
 			};
 
 			scope.do_convertFrom = function(value) {
+				if(!scope.convertFrom || scope.convertFrom === "") return value;
+
 				var from = new Decimal(units[scope.convertFrom]);
 				var to = new Decimal(units[scope.convertTo]);
 				return (new Decimal(value).dividedBy(from.dividedBy(to))).toNumber();
 			};
 
 			scope.do_convertTo = function(value) {
+				if(!scope.convertTo || scope.convertTo === "") return value;
+
 				var from = new Decimal(units[scope.convertFrom]);
 				var to = new Decimal(units[scope.convertTo]);
 				return (new Decimal(value).times(from.dividedBy(to))).toNumber();
