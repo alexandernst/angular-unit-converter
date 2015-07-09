@@ -1,4 +1,7 @@
 ### 0.0.4
+- Don't require things we don't need.
+
+### 0.0.4
 - Don't screw values if convertTo/From are not set.
 
 ### 0.0.3
