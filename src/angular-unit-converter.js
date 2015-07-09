@@ -1,6 +1,6 @@
 var auc = angular.module('angular-unit-converter', []);
 
-auc.directive("angularUnitConverter", function($filter) {
+auc.directive("angularUnitConverter", function() {
 	return {
 		require: 'ngModel',
 		scope: {
