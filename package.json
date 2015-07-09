@@ -3,8 +3,7 @@
 	"version": "0.0.5",
 	"description": "AngularJS directive that converts to/from metric units using $parser and $formatters",
 	"main": [
-		"angular-multi-select.js",
-		"angular-multi-select.css"
+		"angular-unit-converter.js",
 	],
 	"repository": {
 		"type": "git",
