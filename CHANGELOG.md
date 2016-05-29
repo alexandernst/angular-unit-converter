@@ -1,3 +1,9 @@
+### 0.0.6
+- Relax package.json semver requires.
+
+### 0.0.5
+- Fix typos.
+
 ### 0.0.4
 - Don't require things we don't need.
 
