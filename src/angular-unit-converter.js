@@ -50,8 +50,7 @@ auc.directive("angularUnitConverter", function() {
 			};
 
 			var p = function(viewValue) {
-				var m = viewValue.match(/^\-?\d+((\.|\,)\d+)?$/g);
-				if (m !== null) {
+				if (viewValue && viewValue.match(/^\-?\d+((\.|\,)\d+)?$/g) !== null) {
 					return scope.do_convertFrom(parseFloat(viewValue));
 				}
 			};
